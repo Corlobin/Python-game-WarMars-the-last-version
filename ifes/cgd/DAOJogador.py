@@ -3,6 +3,9 @@ __author__ = 'Ricardo'
 import sqlite3 as lite
 from ifes.cgd import Error
 
+
+import hashlib
+
 class DAOJogador(object):
     def __init__(self):
         try:
@@ -25,10 +28,10 @@ class DAOJogador(object):
     def insere_jogador(self, pessoa):
         try:
             self.inicia_conexao()
-            lista = []
-            lista.append(pessoa)
+            senha = hashlib.md5(pessoa[2].encode('utf-8')).hexdigest()
+            nova_tupla = [(pessoa[0], pessoa[1], senha, pessoa[3], pessoa[4], pessoa[5], pessoa[6], pessoa[7], pessoa[8])]
             cur = self.con.cursor()
-            cur.executemany("INSERT INTO Pessoa (Data_criado, Nome, Senha, Idade, Highscore, Imagem, TempoJogo, Tiros, Percas) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", lista)
+            cur.executemany("INSERT INTO Pessoa (Data_criado, Nome, Senha, Idade, Highscore, Imagem, TempoJogo, Tiros, Percas) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", nova_tupla)
             self.con.commit()
 
         except lite.IntegrityError:
@@ -42,6 +45,7 @@ class DAOJogador(object):
             if self.con:
                 self.con.rollback()
             error = Error.Error('Ocorreu um erro com o banco de dados')
+            print(e)
             raise error
         finally:
             self.fecha_conexao()
@@ -71,6 +75,7 @@ class DAOJogador(object):
         data = None
         try:
             self.inicia_conexao()
+            senha = hashlib.md5(senha.encode('utf-8')).hexdigest()
             lst=[nome, senha]
             cur = self.con.cursor()
             cur.execute(""" SELECT * FROM Pessoa WHERE Nome = ? AND Senha = ? """, lst)

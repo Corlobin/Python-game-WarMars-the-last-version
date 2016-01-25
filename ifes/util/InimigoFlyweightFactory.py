@@ -9,6 +9,5 @@ class InimigoFlyweightFactory(Singleton):
     def get_builder(self, inimigoPassado):
         print(self.dic_builders[inimigoPassado])
         if self.dic_builders[inimigoPassado] == None:
-            print('CRIOU UM INIMIGO ' + inimigoPassado)
             self.dic_builders[inimigoPassado] = Reflection.reflection_builder(inimigoPassado)
         return self.dic_builders[inimigoPassado]
