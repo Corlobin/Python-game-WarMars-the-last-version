@@ -59,7 +59,10 @@
 
 <p>O observador define a dependência de um objeto perante outros objetos, e assim, quando o estado de um objeto é mudado, os objetos dependentes são notificados e atualizados automaticamente. Esse padrão foi util para capturar eventos do teclado, ele já veio implementado na interface do pygame, toda vez que há uma modificação do teclado ele então sabe, e, possivelmente, adiciona a lista de keys pressionadas, o meu cadastro e login e o cenário, que utiliza dos teclados então, sabe quando as teclas são pressionadas. </p>
 
-<p><img src="https://raw.githubusercontent.com/Corlobin/WarMars-4.0/master/Observer%20example.png" alt="Observer"></p>
+<p>Foi também utilizado na colisão, os objetos criados (Helicoptero, Inimigo) herdam da classe pygame.Sprite, que por sua vez, contem um metodo que verifica colisao. Para funcionar dessa forma, é implementado um observador, para analisar a movimentação de cada objeto e caso um colida com determinado objeto, a função então é "ativada".</p>
+
+<p><img src="https://raw.githubusercontent.com/Corlobin/WarMars-4.0/master/Observer%20example.png" alt="Observer">
+<img src="https://github.com/Corlobin/WarMars-4.0/blob/master/Collide.png?raw=true" alt="Observer"></p>
 
 <h3>
 <a id="5-estado" class="anchor" href="#5-estado" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5. Estado</h3>
