@@ -2,76 +2,60 @@
 
 **War Mars** é um jogo que está sendo desenvolvido para Windows/Linux/MacOS na linguagem Python.
 
+
 Autor: Antonio (anribrasil@gmail.com)
 
+Para melhor visualização, o conteudo do trabalho 3 foi omitido, assim, você podera verificar apenas os padrões comportamentais. Você pode visualizar o conteud odo trabalho três clicando [aqui](corlobin.github.io/WarMars3.0)
+
 ### Seções
-1. Padrão de projetos
-2. Padrões comportamentais
-3. Cadeia de Responsabilidade
-4. Iterador
-5. Mediador
-6. Observador
-7. Estado
-8. Estratégia
-9. Visitador
+1. Padrões comportamentais
+2. Cadeia de Responsabilidade
+3. Mediador
+4. Observador
+5. Estado
+6. Estratégia
+7. Visitador
+8. Sonar
+
 
 ### 1. Padrões de projeto ###
 
-Padrões de projeto é uma solução geral reutilizável para um problema que ocorre com frequência dentro de um determinado contexto no projeto de software. [Wikipedia, 2015]. 
-
-### 2. Padrões comportamentais
-
-
 Os padrões comportamentais são relacionados aos comportamentos dos objetos.
 
-### 3. Cadeia de Responsabilidade
-
-A cadeia de responsabilidade serve para evitar o acoplamento de uma requisição com os receivers que irão tratar a requisição. Ela então passa
-por cada objeto até tratar a requisição. 
-
-Não houve necessidade de implementação deste padrão de projetos no trabalho pois sua implementação não foi necessária.
-
-### 4. Iterador
-
-O Iterador foi representado no trabalho por meio do acesso aos objetos sem saber a representação interna. Abaixo segue um trecho do codigo onde o iterador teve
-utilidade no trabalho. 
-![Iterator]( https://github.com/Corlobin/WarMars-4.0/blob/master/Padrao%20Iterator.png?raw=true)
-
-### 5. Mediador
-O mediador define um objeto que encapsula as interações de um conjunto de objetos. No trabalho, o nosso mediador foi nada mais do que o Controlador do Menu, ele foi o responsavel por realizar as iterações dos objetos restantes, mostrando a tela respectiva de cada Estado do jogo. Abaixo segue o diagrama do padrão Mediador implementado no Projeto.
+### 3. Mediador
+O mediador define um objeto que encapsula as interações de um conjunto de objetos. No trabalho, o nosso mediador foi nada mais do que o Controlador do Menu, ele foi o responsavel por realizar as iterações dos objetos restantes, mostrando o controlador respectiva de cada Estado do jogo. Por exemplo, caso eu necessitasse de mostrar o cenário do jogo, eu deveria então haver uma interação para o Controlador respectivo do Cenário, que por sua vez, caso houvesse alguma modificação e/ou volta ao menu, ele retornaria ao menu. Foi implementado então esse padrão em Python, =abaixo segue o diagrama do padrão Mediador implementado no Projeto.
 
 ![Mediador](https://raw.githubusercontent.com/Corlobin/WarMars-4.0/master/Diagrama_Mediador.jpg)
 
-### 6. Observador
+### 4. Observador
 
-O observador define a dependência de um objeto perante outros objetos, e assim, quando o estado de um objeto é mudado, os objetos dependentes são notificados e atualizados automaticamente. No trabalho, não houve a necessidade de implementação do padrão observador porque eu não precisei observar o comportamento de outro objeto;
+O observador define a dependência de um objeto perante outros objetos, e assim, quando o estado de um objeto é mudado, os objetos dependentes são notificados e atualizados automaticamente. Esse padrão foi util para capturar eventos do teclado, ele já veio implementado na interface do pygame, toda vez que há uma modificação do teclado ele então sabe, e, possivelmente, adiciona a lista de keys pressionadas, o meu cadastro e login e o cenário, que utiliza dos teclados então, sabe quando as teclas são pressionadas. 
 
-### 7. Estado
+![Observer](https://raw.githubusercontent.com/Corlobin/WarMars-4.0/master/Observer%20example.png)
+
+### 5. Estado
 
 O padrão permite que o objeto mude seu comportamento conforme o seu estado. Não houve implementação do padrão Estado no projeto. No jogo foi implementado para modificar o estado do helicoptero, lhe dando mais balas e munições para ele metralhar os inimigos! :)
 
 ![State](https://raw.githubusercontent.com/Corlobin/WarMars-4.0/master/PadraoState.png)
 
-### 8. Estratégia, Visitador
+### 6. Estratégia, Visitador, Cadeia
 
-Não houve implementação do padrão Estratégia e Visitador. Sem necessidade de utilização no codigo.
+Não houve implementação do padrão Estratégia, Visitador ou cadeia. Sem necessidade de utilização no codigo.
 
-### 9. Memento
+### 7. Memento
 
-Foi implementado caso acontecesse algum problema com relação ao jogador. 
+Como não há seções criticas o memento deixou de ser implementado no trabalho, mas, posteriormente, caso haja alguma necessidade de implementação de algum local que faça alguma alteração com os dados do usuario, ele será atualizado. De qualquer forma o codigo foi gerado para possiveis utilizações. 
 
 ![Memento](https://github.com/Corlobin/WarMars-4.0/blob/master/Memento.png?raw=true)
 
-### 10. Testes
-  Testes que possuem assert:
-  def test_salvarusuario(self): # Teste com o banco
-  def testa_loading(self): # Testando a tela de carregamento (imagem)
-  def test_imagem_sequencias(self): # Testando o calculo do sequenciamento de imagens
-  def test_shoot_helicoptero(self): # Testando o tiro do helicoptero (imagem/frame)
-  def testa_salvar(self): # Testando o salvar
-  def testa_fabrica(self): # Testando a fabrica
-  def testa_reflection2(self, nome): # Testando reflection
+### 8. Sonar
 
+A avaliação do soonar anteriormente deu uma pontuação de 394. 
+![Sonar](https://github.com/Corlobin/WarMars-4.0/blob/master/sonar3.png?raw=true)
+
+Com as modificações a avaliação não subiu muito, passou para 395.
+![Sonar](https://github.com/Corlobin/WarMars-4.0/blob/master/Sonar4.png?raw=true)
 
 
 
