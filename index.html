@@ -26,6 +26,8 @@
 
 <p>Autor: Antonio (<a href="mailto:anribrasil@gmail.com">anribrasil@gmail.com</a>)</p>
 
+<p>Para melhor visualização, o conteudo do trabalho 3 foi omitido, assim, você podera verificar apenas os padrões comportamentais. Você pode visualizar o conteud odo trabalho três clicando <a href="corlobin.github.io/WarMars3.0">aqui</a></p>
+
 <h3>
 <a id="seções" class="anchor" href="#se%C3%A7%C3%B5es" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Seções</h3>
 
@@ -37,6 +39,7 @@
 <li>Estado</li>
 <li>Estratégia</li>
 <li>Visitador</li>
+<li>Sonar</li>
 </ol>
 
 <h3>
@@ -45,24 +48,18 @@
 <p>Os padrões comportamentais são relacionados aos comportamentos dos objetos.</p>
 
 <h3>
-<a id="2-cadeia-de-responsabilidade" class="anchor" href="#2-cadeia-de-responsabilidade" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Cadeia de Responsabilidade</h3>
-
-<p>A cadeia de responsabilidade serve para evitar o acoplamento de uma requisição com os receivers que irão tratar a requisição. Ela então passa
-por cada objeto até tratar a requisição. </p>
-
-<p>Não houve necessidade de implementação deste padrão de projetos no trabalho pois sua implementação não foi necessária.</p>
-
-<h3>
 <a id="3-mediador" class="anchor" href="#3-mediador" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. Mediador</h3>
 
-<p>O mediador define um objeto que encapsula as interações de um conjunto de objetos. No trabalho, o nosso mediador foi nada mais do que o Controlador do Menu, ele foi o responsavel por realizar as iterações dos objetos restantes, mostrando a tela respectiva de cada Estado do jogo. Abaixo segue o diagrama do padrão Mediador implementado no Projeto.</p>
+<p>O mediador define um objeto que encapsula as interações de um conjunto de objetos. No trabalho, o nosso mediador foi nada mais do que o Controlador do Menu, ele foi o responsavel por realizar as iterações dos objetos restantes, mostrando o controlador respectiva de cada Estado do jogo. Por exemplo, caso eu necessitasse de mostrar o cenário do jogo, eu deveria então haver uma interação para o Controlador respectivo do Cenário, que por sua vez, caso houvesse alguma modificação e/ou volta ao menu, ele retornaria ao menu. Foi implementado então esse padrão em Python, =abaixo segue o diagrama do padrão Mediador implementado no Projeto.</p>
 
 <p><img src="https://raw.githubusercontent.com/Corlobin/WarMars-4.0/master/Diagrama_Mediador.jpg" alt="Mediador"></p>
 
 <h3>
 <a id="4-observador" class="anchor" href="#4-observador" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. Observador</h3>
 
-<p>O observador define a dependência de um objeto perante outros objetos, e assim, quando o estado de um objeto é mudado, os objetos dependentes são notificados e atualizados automaticamente. No trabalho, não houve a necessidade de implementação do padrão observador porque eu não precisei observar o comportamento de outro objeto; </p>
+<p>O observador define a dependência de um objeto perante outros objetos, e assim, quando o estado de um objeto é mudado, os objetos dependentes são notificados e atualizados automaticamente. Esse padrão foi util para capturar eventos do teclado, ele já veio implementado na interface do pygame, toda vez que há uma modificação do teclado ele então sabe, e, possivelmente, adiciona a lista de keys pressionadas, o meu cadastro e login e o cenário, que utiliza dos teclados então, sabe quando as teclas são pressionadas. </p>
+
+<p><img src="https://raw.githubusercontent.com/Corlobin/WarMars-4.0/master/Observer%20example.png" alt="Observer"></p>
 
 <h3>
 <a id="5-estado" class="anchor" href="#5-estado" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5. Estado</h3>
@@ -72,16 +69,25 @@ por cada objeto até tratar a requisição. </p>
 <p><img src="https://raw.githubusercontent.com/Corlobin/WarMars-4.0/master/PadraoState.png" alt="State"></p>
 
 <h3>
-<a id="6-estratégia-visitador" class="anchor" href="#6-estrat%C3%A9gia-visitador" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6. Estratégia, Visitador</h3>
+<a id="6-estratégia-visitador-cadeia" class="anchor" href="#6-estrat%C3%A9gia-visitador-cadeia" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6. Estratégia, Visitador, Cadeia</h3>
 
-<p>Não houve implementação do padrão Estratégia e Visitador. Sem necessidade de utilização no codigo.</p>
+<p>Não houve implementação do padrão Estratégia, Visitador ou cadeia. Sem necessidade de utilização no codigo.</p>
 
 <h3>
 <a id="7-memento" class="anchor" href="#7-memento" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>7. Memento</h3>
 
-<p>Foi implementado caso acontecesse algum problema com relação ao jogador. </p>
+<p>Como não há seções criticas o memento deixou de ser implementado no trabalho, mas, posteriormente, caso haja alguma necessidade de implementação de algum local que faça alguma alteração com os dados do usuario, ele será atualizado. De qualquer forma o codigo foi gerado para possiveis utilizações. </p>
 
 <p><img src="https://github.com/Corlobin/WarMars-4.0/blob/master/Memento.png?raw=true" alt="Memento"></p>
+
+<h3>
+<a id="8-sonar" class="anchor" href="#8-sonar" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>8. Sonar</h3>
+
+<p>A avaliação do soonar anteriormente deu uma pontuação de 394. 
+<img src="https://github.com/Corlobin/WarMars-4.0/blob/master/sonar3.png?raw=true" alt="Sonar"></p>
+
+<p>Com as modificações a avaliação não subiu muito, passou para 395.
+<img src="https://github.com/Corlobin/WarMars-4.0/blob/master/Sonar4.png?raw=true" alt="Sonar"></p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/Corlobin/WarMars-4.0">Warmars-4.0</a> is maintained by <a href="https://github.com/Corlobin">Corlobin</a>.</span>
