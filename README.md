@@ -31,8 +31,10 @@ O mediador define um objeto que encapsula as interações de um conjunto de obje
 
 O observador define a dependência de um objeto perante outros objetos, e assim, quando o estado de um objeto é mudado, os objetos dependentes são notificados e atualizados automaticamente. Esse padrão foi util para capturar eventos do teclado, ele já veio implementado na interface do pygame, toda vez que há uma modificação do teclado ele então sabe, e, possivelmente, adiciona a lista de keys pressionadas, o meu cadastro e login e o cenário, que utiliza dos teclados então, sabe quando as teclas são pressionadas. 
 
-![Observer](https://raw.githubusercontent.com/Corlobin/WarMars-4.0/master/Observer%20example.png)
+Foi também utilizado na colisão, os objetos criados (Helicoptero, Inimigo) herdam da classe pygame.Sprite, que por sua vez, contem um metodo que verifica colisao. Para funcionar dessa forma, é implementado um observador, para analisar a movimentação de cada objeto e caso um colida com determinado objeto, a função então é "ativada".
 
+![Observer](https://raw.githubusercontent.com/Corlobin/WarMars-4.0/master/Observer%20example.png)
+![Observer](https://github.com/Corlobin/WarMars-4.0/blob/master/Collide.png?raw=true)
 ### 5. Estado
 
 O padrão permite que o objeto mude seu comportamento conforme o seu estado. Não houve implementação do padrão Estado no projeto. No jogo foi implementado para modificar o estado do helicoptero, lhe dando mais balas e munições para ele metralhar os inimigos! :)
