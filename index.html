@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Warmars-4.0 by Corlobin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Warmars-4.0</h1>
+      <h2 class="project-tagline">A ultima versão do jogo de tiros em marte com a implementação dos padrões de projetos Comportamental.</h2>
+      <a href="https://github.com/Corlobin/WarMars-4.0" class="btn">View on GitHub</a>
+      <a href="https://github.com/Corlobin/WarMars-4.0/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Corlobin/WarMars-4.0/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h2>
+<a id="war-mars" class="anchor" href="#war-mars" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>War Mars</h2>
+
+<p><strong>War Mars</strong> é um jogo que está sendo desenvolvido para Windows/Linux/MacOS na linguagem Python.</p>
+
+<p>Autor: Antonio (<a href="mailto:anribrasil@gmail.com">anribrasil@gmail.com</a>)</p>
+
+<h3>
+<a id="seções" class="anchor" href="#se%C3%A7%C3%B5es" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Seções</h3>
+
+<ol>
+<li>Padrão de projetos</li>
+<li>Padrões comportamentais</li>
+<li>Cadeia de Responsabilidade</li>
+<li>Iterador</li>
+<li>Mediador</li>
+<li>Observador</li>
+<li>Estado</li>
+<li>Estratégia</li>
+<li>Visitador</li>
+</ol>
+
+<h3>
+<a id="1-padrões-de-projeto" class="anchor" href="#1-padr%C3%B5es-de-projeto" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Padrões de projeto</h3>
+
+<p>Padrões de projeto é uma solução geral reutilizável para um problema que ocorre com frequência dentro de um determinado contexto no projeto de software. [Wikipedia, 2015]. </p>
+
+<h3>
+<a id="2-padrões-comportamentais" class="anchor" href="#2-padr%C3%B5es-comportamentais" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Padrões comportamentais</h3>
+
+<p>Os padrões comportamentais são relacionados aos comportamentos dos objetos.</p>
+
+<h3>
+<a id="3-cadeia-de-responsabilidade" class="anchor" href="#3-cadeia-de-responsabilidade" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. Cadeia de Responsabilidade</h3>
+
+<p>A cadeia de responsabilidade serve para evitar o acoplamento de uma requisição com os receivers que irão tratar a requisição. Ela então passa
+por cada objeto até tratar a requisição. </p>
+
+<p>Não houve necessidade de implementação deste padrão de projetos no trabalho pois sua implementação não foi necessária.</p>
+
+<h3>
+<a id="4-iterador" class="anchor" href="#4-iterador" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. Iterador</h3>
+
+<p>O Iterador foi representado no trabalho por meio do acesso aos objetos sem saber a representação interna. Abaixo segue um trecho do codigo onde o iterador teve
+utilidade no trabalho. 
+<img src="https://github.com/Corlobin/WarMars-4.0/blob/master/Padrao%20Iterator.png?raw=true" alt="Iterator"></p>
+
+<h3>
+<a id="5-mediador" class="anchor" href="#5-mediador" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5. Mediador</h3>
+
+<p>O mediador define um objeto que encapsula as interações de um conjunto de objetos. No trabalho, o nosso mediador foi nada mais do que o Controlador do Menu, ele foi o responsavel por realizar as iterações dos objetos restantes, mostrando a tela respectiva de cada Estado do jogo. Abaixo segue o diagrama do padrão Mediador implementado no Projeto.</p>
+
+<p><img src="https://raw.githubusercontent.com/Corlobin/WarMars-4.0/master/Diagrama_Mediador.jpg" alt="Mediador"></p>
+
+<h3>
+<a id="6-observador" class="anchor" href="#6-observador" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6. Observador</h3>
+
+<p>O observador define a dependência de um objeto perante outros objetos, e assim, quando o estado de um objeto é mudado, os objetos dependentes são notificados e atualizados automaticamente. No trabalho, não houve a necessidade de implementação do padrão observador porque eu não precisei observar o comportamento de outro objeto;</p>
+
+<h3>
+<a id="7-estado" class="anchor" href="#7-estado" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>7. Estado</h3>
+
+<p>O padrão permite que o objeto mude seu comportamento conforme o seu estado. Não houve implementação do padrão Estado no projeto. No jogo foi implementado para modificar o estado do helicoptero, lhe dando mais balas e munições para ele metralhar os inimigos! :)</p>
+
+<p><img src="https://raw.githubusercontent.com/Corlobin/WarMars-4.0/master/PadraoState.png" alt="State"></p>
+
+<h3>
+<a id="8-estratégia-visitador" class="anchor" href="#8-estrat%C3%A9gia-visitador" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>8. Estratégia, Visitador</h3>
+
+<p>Não houve implementação do padrão Estratégia e Visitador. Sem necessidade de utilização no codigo.</p>
+
+<h3>
+<a id="10-memento" class="anchor" href="#10-memento" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>10. Memento</h3>
+
+<p>Foi implementado caso acontecesse algum problema com relação ao jogador. </p>
+
+<p><img src="https://github.com/Corlobin/WarMars-4.0/blob/master/Memento.png?raw=true" alt="Memento"></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Corlobin/WarMars-4.0">Warmars-4.0</a> is maintained by <a href="https://github.com/Corlobin">Corlobin</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
