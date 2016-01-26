@@ -56,11 +56,21 @@ O padrão permite que o objeto mude seu comportamento conforme o seu estado. Nã
 
 Não houve implementação do padrão Estratégia e Visitador. Sem necessidade de utilização no codigo.
 
-### 10. Memento
+### 9. Memento
 
 Foi implementado caso acontecesse algum problema com relação ao jogador. 
 
 ![Memento](https://github.com/Corlobin/WarMars-4.0/blob/master/Memento.png?raw=true)
+
+### 10. Testes
+  Testes que possuem assert:
+  def test_salvarusuario(self): # Teste com o banco
+  def testa_loading(self): # Testando a tela de carregamento (imagem)
+  def test_imagem_sequencias(self): # Testando o calculo do sequenciamento de imagens
+  def test_shoot_helicoptero(self): # Testando o tiro do helicoptero (imagem/frame)
+  def testa_salvar(self): # Testando o salvar
+  def testa_fabrica(self): # Testando a fabrica
+  def testa_reflection2(self, nome): # Testando reflection
 
 
 
