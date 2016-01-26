@@ -13,19 +13,6 @@ from ifes.util.FabricaInimigo import FabricaInimigo
 
 from ifes.cdp.Inimigo import Inimigo
 class TestStringMethods(unittest.TestCase):
-    def test_upper(self):
-        self.assertEqual('foo'.upper(), 'FOO')
-
-    def test_isupper(self):
-        self.assertTrue('FOO'.isupper())
-        self.assertFalse('Foo'.isupper())
-
-    def test_split(self):
-        s = 'hello world'
-        self.assertEqual(s.split(), ['hello', 'world'])
-        # check that s.split fails when the separator is not a string
-        with self.assertRaises(TypeError):
-            s.split(2)
 
     def test_salvarusuario(self):
         try:
@@ -37,6 +24,8 @@ class TestStringMethods(unittest.TestCase):
             daojogador.inicia_conexao()
             daojogador.insere_jogador(pessoa.toString())
             daojogador.fecha_conexao()
+
+
         except Error.Error as m:
             print(m.msg)
         except Exception as e:
@@ -45,25 +34,28 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(pessoa.toString(), ('ricardo'))
 
     def testa_loading(self):
-        pygame.init()
-        pygame.font.init()
-        pygame.mouse.set_visible(True)
-        screen = pygame.display.set_mode((640, 480))
+        #pygame.init()
+        #pygame.font.init()
+        #pygame.mouse.set_visible(True)
+        #screen = pygame.display.set_mode((640, 480))
         waiting = 0
         fonte_error = pygame.font.SysFont("comicsansms", 16)
         while waiting <= 400:
             loading = Imagem.Imagem.load_image('carregando.png', 0)
-            screen.blit(loading, (0, 0))
+            #screen.blit(loading, (0, 0))
             mensagem = format("%d" % (waiting/4))
             error = fonte_error.render(mensagem, 1, (255, 0, 0))
-            screen.blit(error, (399, 162))
+            #screen.blit(error, (399, 162))
             pygame.display.update()
             waiting += 1
 
+        self.assertEqual(waiting, 400)
+
+
     def test_imagem_sequencias(self):
-        pygame.init()
-        pygame.font.init()
-        pygame.mouse.set_visible(True)
+        #pygame.init()
+        #pygame.font.init()
+        #pygame.mouse.set_visible(True)
         screen = pygame.display.set_mode((640, 480))
 
         while True:
@@ -108,12 +100,15 @@ class TestStringMethods(unittest.TestCase):
             screen.blit(imagem, (000, 400), (calculo11,0, x_de_cada_imagem, y_de_cada_imagem))
             screen.blit(imagem, (000, 440), (calculo12,0, x_de_cada_imagem, y_de_cada_imagem))
 
-            pygame.display.update()
-            for event in pygame.event.get():
-                if event.type == pygame.KEYDOWN:
-                    if event.key == pygame.K_ESCAPE:  # ESC
-                        pygame.quit()
+            #pygame.display.update()
+            #for event in pygame.event.get():
+            #    if event.type == pygame.KEYDOWN:
+            #        if event.key == pygame.K_ESCAPE:  # ESC
+            #            pygame.quit()
 
+
+
+        self.assertEqual(calculo1, 30)
 
     def test_shoot_helicoptero(self):
         pygame.init()
@@ -199,8 +194,7 @@ class TestStringMethods(unittest.TestCase):
 
     def testa_fabrica(self):
         inimigo = FabricaInimigo.criar_inimigo()
-        print(inimigo.pontuacao)
-        print(inimigo.image)
+        self.assertEqual(inimigo, isinstance(Inimigo))
 
     def testa_reflection2(self, nome):
         nome = [nome]
@@ -208,14 +202,7 @@ class TestStringMethods(unittest.TestCase):
         _temp = __import__(path, fromlist=nome)
         inimigo = getattr(_temp, nome)
         inimigo = inimigo()
-        print(inimigo)
-
-    def testa_reflection(self):
-        nome = ['Inimigo']
-        path = "ifes.cdp.Inimigo"
-        #_temp = __import__(path, fromlist=nome)
-        #inimigo = _temp.Inimigo
-        #inimigo = inimigo()
+        self.assertEqual(inimigo, isinstance(Inimigo))
 
     def testa_fabrica(self):
 
@@ -237,7 +224,6 @@ class TestStringMethods(unittest.TestCase):
 
             inimigo.update()
             pygame.display.update()
-
 
 
 if __name__ == '__main__':

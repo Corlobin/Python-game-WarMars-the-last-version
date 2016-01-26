@@ -17,7 +17,7 @@ class CtrlTelaCadastro(Singleton.Singleton):
         if(pessoa != None and opcao == 2):
             try:
                 AplGerenciarJogador.AplGerenciarJogador.cadastra_jogador(pessoa)
-                self.tela.exibe_mensagem("Funcionou essa bagaca")
+                self.tela.exibe_mensagem("Cadastrado com sucesso")
             except Error.Error as arg:
                 print(arg.msg)
                 self.tela.exibe_mensagem(arg.msg)
