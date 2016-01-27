@@ -37,7 +37,7 @@ Foi também utilizado na colisão, os objetos criados (Helicoptero, Inimigo) her
 ![Observer](https://github.com/Corlobin/WarMars-4.0/blob/master/Collide.png?raw=true)
 ### 5. Estado
 
-O padrão permite que o objeto mude seu comportamento conforme o seu estado. Não houve implementação do padrão Estado no projeto. No jogo foi implementado para modificar o estado do helicoptero, lhe dando mais balas e munições para ele metralhar os inimigos! :)
+O padrão permite que o objeto mude seu comportamento conforme o seu estado. No jogo foi implementado para modificar o estado do helicoptero, lhe dando mais balas e munições para ele metralhar os inimigos! :)
 
 ![State](https://raw.githubusercontent.com/Corlobin/WarMars-4.0/master/PadraoState.png)
 
