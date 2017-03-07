@@ -3,7 +3,7 @@
 **War Mars** é um jogo que foi desenvolvido para Windows/Linux/MacOS na linguagem Python.
 
 
-Autor: Antonio (anribrasil@gmail.com)
+Autor: rick (anribrasil@gmail.com)
 
 Para melhor visualização, o conteudo do trabalho 3 foi omitido, assim, você podera verificar apenas os padrões comportamentais. Você pode visualizar o conteud odo trabalho três clicando [aqui](corlobin.github.io/WarMars3.0)
 
